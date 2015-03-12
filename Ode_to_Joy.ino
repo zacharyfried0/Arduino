@@ -45,7 +45,7 @@ void setup() {
 
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
-    int pauseBetweenNotes = noteDuration * 1.30;
+    int pauseBetweenNotes = noteDuration * 1.10;
     delay(pauseBetweenNotes);
     // stop the tone playing:
   }
