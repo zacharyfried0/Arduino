@@ -39,10 +39,10 @@ void killpin(int pin){
 void loop() {
   for (int thisNote = 0; thisNote < 62; thisNote++) {
     int noteDuration = 1000 / noteDurations[thisNote];
-    noPin(1 + note(thisNote));
+    noPin(1 + note(melody[thisNote]));
     tone(8, melody[thisNote], noteDuration);
     int pauseBetweenNotes = noteDuration * 1.10;
     delay(pauseBetweenNotes);
-    killpin(1 + note(thisNote));
+    killpin(1 + note(melody[thisNote]));
   }
 }
