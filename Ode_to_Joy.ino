@@ -34,10 +34,12 @@ int noteDurations[] = {
 };
 
 void setup() {
-  
-}
-
-void loop() {
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
   // iterate over the notes of the melody:
   for (int thisNote = 0; thisNote < 62; thisNote++) {
 
@@ -49,9 +51,16 @@ void loop() {
 
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
-    int pauseBetweenNotes = noteDuration * 1.10;
+    int pauseBetweenNotes = noteDuration * 1.30;
     delay(pauseBetweenNotes);
     // stop the tone playing:
   }
+}
+
+void loop() {
   // no need to repeat the melody.
+}
+
+void loop(){
+  
 }
