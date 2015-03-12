@@ -41,8 +41,8 @@ void loop() {
     int noteDuration = 1000 / noteDurations[thisNote];
     noPin(1 + note(thisNote));
     tone(8, melody[thisNote], noteDuration);
-    killpin(1 + note(thisNote));
-    int pauseBetweenNotes = noteDuration * 1.30;
+    int pauseBetweenNotes = noteDuration * 1.10;
     delay(pauseBetweenNotes);
+    killpin(1 + note(thisNote));
   }
 }
