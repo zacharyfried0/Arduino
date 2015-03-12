@@ -7,18 +7,33 @@ void setup() {
 }
 
 int ti = 75;
+int ch = 10;
+
+void pOn(int p) {
+  digitalWrite(p, HIGH);
+}
+
+void pOff(int p) {
+  digitalWrite(p, LOW);
+}
 
 void loop() {
-  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(ti);              // wait for a second
-  digitalWrite(12, HIGH);
+  if (ti > 100) {
+    ch = -10;
+  } else if (ti < 10) {
+    ch = 10;
+  }
+  pOn(13);
   delay(ti);
-  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  pOn(12);
   delay(ti);
-  digitalWrite(11, HIGH);
+  pOff(13);
   delay(ti);
-  digitalWrite(12, LOW);
+  pOn(11);
   delay(ti);
-  digitalWrite(11, LOW);
+  pOff(12);
   delay(ti);
+  pOff(11);
+  delay(ti);
+  ti += ch;
 }
