@@ -34,6 +34,10 @@ int noteDurations[] = {
 };
 
 void setup() {
+  
+}
+
+void loop() {
   // iterate over the notes of the melody:
   for (int thisNote = 0; thisNote < 62; thisNote++) {
 
@@ -49,8 +53,5 @@ void setup() {
     delay(pauseBetweenNotes);
     // stop the tone playing:
   }
-}
-
-void loop() {
   // no need to repeat the melody.
 }
